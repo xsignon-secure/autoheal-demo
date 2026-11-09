@@ -1,0 +1,14 @@
+{
+  "at": "2026-11-09T20:10:34.241Z",
+  "selector": "internal:role=button[name=\"Continue\"i]",
+  "page": "/login",
+  "file": "tests/login.spec.ts",
+  "fingerprint": {
+    "tag": "BUTTON",
+    "role": "button",
+    "name": "Continue",
+    "text": "Continue",
+    "type": "submit",
+    "near": "Welcome back"
+  }
+}
