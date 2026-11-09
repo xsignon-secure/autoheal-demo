@@ -1,0 +1,12 @@
+{
+  "at": "2026-11-09T19:38:53.632Z",
+  "selector": "internal:role=status",
+  "page": "/login",
+  "fingerprint": {
+    "tag": "P",
+    "role": "status",
+    "text": "Signed in as ada@example.com",
+    "id": "msg",
+    "near": "Welcome back"
+  }
+}

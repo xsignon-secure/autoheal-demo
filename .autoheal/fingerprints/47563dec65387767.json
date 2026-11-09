@@ -1,0 +1,12 @@
+{
+  "at": "2026-11-09T19:38:53.628Z",
+  "selector": "internal:role=status",
+  "page": "/",
+  "fingerprint": {
+    "tag": "P",
+    "role": "status",
+    "text": "1 item in your cart",
+    "id": "cart",
+    "near": "Demo Shop"
+  }
+}

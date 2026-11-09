@@ -1,0 +1,13 @@
+{
+  "at": "2026-11-09T19:38:53.632Z",
+  "selector": "internal:role=button[name=\"Log in\"i]",
+  "page": "/login",
+  "fingerprint": {
+    "tag": "BUTTON",
+    "role": "button",
+    "name": "Log in",
+    "text": "Log in",
+    "type": "submit",
+    "near": "Welcome back"
+  }
+}

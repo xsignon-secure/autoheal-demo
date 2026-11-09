@@ -1,0 +1,13 @@
+{
+  "at": "2026-11-09T19:38:53.628Z",
+  "selector": "internal:testid=[data-testid=\"add-mug\"s]",
+  "page": "/",
+  "fingerprint": {
+    "tag": "BUTTON",
+    "role": "button",
+    "name": "Add to cart",
+    "text": "Add to cart",
+    "testId": "add-mug",
+    "near": "Coffee mug"
+  }
+}

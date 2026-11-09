@@ -1,0 +1,14 @@
+{
+  "at": "2026-11-09T19:38:53.632Z",
+  "selector": "internal:label=\"Email\"i",
+  "page": "/login",
+  "fingerprint": {
+    "tag": "INPUT",
+    "role": "textbox",
+    "name": "Email",
+    "id": "email",
+    "type": "email",
+    "label": "Email",
+    "near": "Welcome back"
+  }
+}

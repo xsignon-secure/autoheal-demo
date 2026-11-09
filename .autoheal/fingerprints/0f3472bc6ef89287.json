@@ -1,0 +1,12 @@
+{
+  "at": "2026-11-09T19:38:53.633Z",
+  "selector": "internal:testid=[data-testid=\"pro-price\"s]",
+  "page": "/pricing",
+  "fingerprint": {
+    "tag": "P",
+    "role": "paragraph",
+    "text": "$10 a month",
+    "testId": "pro-price",
+    "near": "Pro plan"
+  }
+}
