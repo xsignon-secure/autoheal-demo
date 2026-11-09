@@ -15,7 +15,7 @@ const routes = {
     `<h1>Demo Shop</h1>
      <section aria-label="Coffee mug">
        <h2>Coffee mug</h2><p>$8</p>
-       <button data-testid="add-mug" onclick="document.getElementById('cart').textContent='1 item in your cart'">Add to cart</button>
+       <button data-testid="mug-add-button" onclick="document.getElementById('cart').textContent='1 item in your cart'">Add to cart</button>
      </section>
      <p id="cart" role="status">Your cart is empty</p>`,
   ),
