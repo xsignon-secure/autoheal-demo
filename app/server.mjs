@@ -24,7 +24,7 @@ const routes = {
     `<h1>Welcome back</h1>
      <form onsubmit="event.preventDefault();document.getElementById('msg').textContent='Signed in as '+document.getElementById('email').value;">
        <label for="email">Email</label> <input id="email" type="email">
-       <button type="submit">Log in</button>
+       <button type="submit">Continue</button>
      </form>
      <p id="msg" role="status"></p>`,
   ),
