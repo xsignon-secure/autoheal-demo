@@ -52,3 +52,11 @@ The tests fail, AutoHeal runs, and a few minutes later you have a draft PR that 
 - `.github/workflows/e2e.yml`: runs the tests and keeps the report and traces when they fail.
 - `.github/workflows/autoheal.yml`: AutoHeal, the same file `npx xsignon-autoheal init` writes.
 - `break-the-ui.sh`: the UI change.
+
+## KeepGreen: new tests, written for you
+
+This repo also runs [KeepGreen](https://github.com/xsignon-secure/keepgreen), which explores the shop
+and writes tests for user flows that have none yet (`.github/workflows/keepgreen-explore.yml`,
+settings in `.keepgreen.yml`). Run it from *Actions > KeepGreen explore > Run workflow*. It uses
+OpenRouter here (secret `OPENROUTER_API_KEY`, variable `AUTOHEAL_MODEL`); any OpenAI-compatible
+endpoint, Anthropic or OpenAI works the same way.

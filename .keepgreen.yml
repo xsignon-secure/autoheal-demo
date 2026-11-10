@@ -1,0 +1,9 @@
+# KeepGreen settings for the demo shop.
+start-command: npm run start
+start-url: http://127.0.0.1:3000/
+pages:
+  - /login
+  - /pricing
+max-flows: 2
+max-usd: 2
+runs: 3
