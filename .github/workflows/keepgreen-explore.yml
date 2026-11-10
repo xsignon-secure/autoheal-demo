@@ -36,9 +36,8 @@ on:
         description: App URL to explore (blank = url in .keepgreen.yml)
         required: false
       max-flows:
-        description: New tests to try (1-10)
+        description: New tests to try (1-10; blank = .keepgreen.yml)
         required: false
-        default: "3"
   # schedule:
   #   - cron: "0 6 * * 1" # every Monday 06:00 UTC
 
