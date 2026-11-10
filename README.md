@@ -2,6 +2,16 @@
 
 A tiny shop (plain Node, no dependencies) with three Playwright tests and [AutoHeal AI](https://github.com/xsignon-secure/AutoHeal-AI) already set up. Use it to watch AutoHeal fix a broken test in about five minutes, before you add it to your own project.
 
+## See it live in this repository
+
+These PRs are real runs, with no AI key set. Every fix below came from a saved element fingerprint, so it used 0 tokens.
+
+| PR | What happened |
+|---|---|
+| [#1](https://github.com/xsignon-secure/autoheal-demo/pull/1) | A redesign renamed a button, changed a test id and raised the Pro price. AutoHeal opened [fix PR #2](https://github.com/xsignon-secure/autoheal-demo/pull/2), which fixes the two tests with before and after screenshots, and [issue #3](https://github.com/xsignon-secure/autoheal-demo/issues/3) for the price, which is an app bug the test was right to catch. `/autoheal explain` and `/autoheal apply` were then used on the PR. |
+| [#4](https://github.com/xsignon-secure/autoheal-demo/pull/4) | A renamed test id. `/autoheal retry` opened [fix PR #7](https://github.com/xsignon-secure/autoheal-demo/pull/7), `/autoheal apply` added it to the branch, and the tests went green on their own. |
+| [#5](https://github.com/xsignon-secure/autoheal-demo/pull/5) | The login button now says "Continue". After `/autoheal ignore` closed [fix PR #6](https://github.com/xsignon-secure/autoheal-demo/pull/6), `/autoheal retry` did not propose the declined change again, and said why. |
+
 ## On your machine (no account, no AI key needed)
 
 ```bash
