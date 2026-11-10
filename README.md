@@ -58,5 +58,5 @@ The tests fail, AutoHeal runs, and a few minutes later you have a draft PR that 
 This repo also runs [KeepGreen](https://github.com/xsignon-secure/keepgreen), which explores the shop
 and writes tests for user flows that have none yet (`.github/workflows/keepgreen-explore.yml`,
 settings in `.keepgreen.yml`). Run it from *Actions > KeepGreen explore > Run workflow*. It uses
-OpenRouter here (secret `OPENROUTER_API_KEY`, variable `AUTOHEAL_MODEL`); any OpenAI-compatible
+OpenRouter here (secret `OPENROUTER_API_KEY`; model `anthropic/claude-sonnet-5.5` unless the variable `AUTOHEAL_MODEL` says otherwise); any OpenAI-compatible
 endpoint, Anthropic or OpenAI works the same way.

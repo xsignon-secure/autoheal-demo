@@ -63,8 +63,8 @@ jobs:
       AUTOHEAL_BASE_URL: https://openrouter.ai/api/v1
       AUTOHEAL_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
       # USD per 1M tokens of the model below, so max-usd can be enforced.
-      AUTOHEAL_PRICE_IN: ${{ vars.AUTOHEAL_PRICE_IN || '3' }}
-      AUTOHEAL_PRICE_OUT: ${{ vars.AUTOHEAL_PRICE_OUT || '15' }}
+      AUTOHEAL_PRICE_IN: ${{ vars.AUTOHEAL_PRICE_IN || '2' }}
+      AUTOHEAL_PRICE_OUT: ${{ vars.AUTOHEAL_PRICE_OUT || '10' }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -80,7 +80,7 @@ jobs:
         with:
           url: ${{ inputs.url }}
           max-flows: ${{ inputs.max-flows }}
-          model: ${{ vars.AUTOHEAL_MODEL }} # the OpenRouter model id, set as a repository variable
+          model: ${{ vars.AUTOHEAL_MODEL || 'anthropic/claude-sonnet-5.5' }} # OpenRouter model id
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         if: steps.keepgreen.outputs.written != '0'
         with:
