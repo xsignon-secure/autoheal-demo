@@ -1,0 +1,14 @@
+{
+  "at": "2026-11-09T20:19:35.394Z",
+  "selector": "internal:role=button[name=\"Add to cart\"i]",
+  "page": "/",
+  "file": "tests/cart.spec.ts",
+  "fingerprint": {
+    "tag": "BUTTON",
+    "role": "button",
+    "name": "Add to cart",
+    "text": "Add to cart",
+    "testId": "mug-add-button",
+    "near": "Coffee mug"
+  }
+}

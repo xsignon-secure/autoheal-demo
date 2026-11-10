@@ -1,0 +1,9 @@
+{
+  "at": "2026-11-09T20:20:09.114Z",
+  "file": "tests/cart.spec.ts",
+  "test": "cart.spec.ts › add a mug to the cart",
+  "rootCause": "LOCATOR_DRIFT",
+  "before": "getByTestId('add-mug')",
+  "after": "getByRole('button', { name: 'Add to cart' })",
+  "note": "The element this locator found before (saved 2026-11-09) is still on the page with the same role, tag, near, name, text; the new locator finds it again."
+}
