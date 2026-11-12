@@ -56,15 +56,6 @@ jobs:
       contents: read
     outputs:
       written: ${{ steps.keepgreen.outputs.written }}
-    # The AI: OpenRouter (any OpenAI-compatible endpoint works the same way).
-    # The key goes only to OpenRouter; tests and the app run without it.
-    env:
-      AUTOHEAL_PROVIDER: openai-compatible
-      AUTOHEAL_BASE_URL: https://openrouter.ai/api/v1
-      AUTOHEAL_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-      # USD per 1M tokens of the model below, so max-usd can be enforced.
-      AUTOHEAL_PRICE_IN: ${{ vars.AUTOHEAL_PRICE_IN || '2' }}
-      AUTOHEAL_PRICE_OUT: ${{ vars.AUTOHEAL_PRICE_OUT || '10' }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -76,11 +67,18 @@ jobs:
       - run: npm ci
       - run: npx playwright install --with-deps chromium
       - id: keepgreen
-        uses: xsignon-secure/keepgreen@v0.1.0
+        uses: xsignon-secure/keepgreen@v0.1.1
         with:
           url: ${{ inputs.url }}
           max-flows: ${{ inputs.max-flows }}
+          # The AI: OpenRouter (any OpenAI-compatible endpoint works the same way).
+          # The key goes only to OpenRouter; tests and the app run without it.
+          base-url: https://openrouter.ai/api/v1
+          api-key: ${{ secrets.OPENROUTER_API_KEY }}
           model: ${{ vars.AUTOHEAL_MODEL || 'anthropic/claude-sonnet-5.5' }} # OpenRouter model id
+          # USD per 1M tokens of that model, so max-usd can be enforced.
+          price-in: ${{ vars.AUTOHEAL_PRICE_IN || '2' }}
+          price-out: ${{ vars.AUTOHEAL_PRICE_OUT || '10' }}
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         if: steps.keepgreen.outputs.written != '0'
         with:
@@ -110,7 +108,7 @@ jobs:
         env:
           npm_config_ignore_scripts: "true"
           OUT: ${{ runner.temp }}/keepgreen-out
-        run: npx -y keepgreen@0.1.0 check-patch "$OUT/new-tests.patch"
+        run: npx -y keepgreen@0.1.1 check-patch "$OUT/new-tests.patch"
       - name: Open the pull request
         env:
           GH_TOKEN: ${{ github.token }}
