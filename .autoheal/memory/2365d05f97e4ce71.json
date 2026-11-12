@@ -1,0 +1,9 @@
+{
+  "at": "2026-11-09T19:44:35.818Z",
+  "file": "tests/login.spec.ts",
+  "test": "login.spec.ts › user can log in",
+  "rootCause": "LOCATOR_DRIFT",
+  "before": "getByRole('button', { name: 'Log in' })",
+  "after": "getByRole('button', { name: 'Sign in' })",
+  "note": "The element this locator found before (saved 2026-11-09) is still on the page with the same role, type, tag, near; the new locator finds it again."
+}

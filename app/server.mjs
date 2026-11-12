@@ -15,7 +15,7 @@ const routes = {
     `<h1>Demo Shop</h1>
      <section aria-label="Coffee mug">
        <h2>Coffee mug</h2><p>$8</p>
-       <button data-testid="add-mug" onclick="document.getElementById('cart').textContent='1 item in your cart'">Add to cart</button>
+       <button data-testid="add-to-cart-mug" onclick="document.getElementById('cart').textContent='1 item in your cart'">Add to cart</button>
      </section>
      <p id="cart" role="status">Your cart is empty</p>`,
   ),
@@ -24,11 +24,11 @@ const routes = {
     `<h1>Welcome back</h1>
      <form onsubmit="event.preventDefault();document.getElementById('msg').textContent='Signed in as '+document.getElementById('email').value;">
        <label for="email">Email</label> <input id="email" type="email">
-       <button type="submit">Log in</button>
+       <button type="submit">Sign in</button>
      </form>
      <p id="msg" role="status"></p>`,
   ),
-  '/pricing': page('Pricing', '<h1>Pricing</h1><section aria-label="Pro plan"><h2>Pro</h2><p data-testid="pro-price">$10 a month</p></section>'),
+  '/pricing': page('Pricing', '<h1>Pricing</h1><section aria-label="Pro plan"><h2>Pro</h2><p data-testid="pro-price">$12 a month</p></section>'),
 };
 
 http
