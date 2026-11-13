@@ -67,7 +67,7 @@ jobs:
       - run: npm ci
       - run: npx playwright install --with-deps chromium
       - id: keepgreen
-        uses: xsignon-secure/keepgreen@v0.1.1
+        uses: xsignon-secure/keepgreen@v0.2.0
         with:
           url: ${{ inputs.url }}
           max-flows: ${{ inputs.max-flows }}
@@ -108,7 +108,7 @@ jobs:
         env:
           npm_config_ignore_scripts: "true"
           OUT: ${{ runner.temp }}/keepgreen-out
-        run: npx -y keepgreen@0.1.1 check-patch "$OUT/new-tests.patch"
+        run: npx -y keepgreen@0.2.0 check-patch "$OUT/new-tests.patch"
       - name: Open the pull request
         env:
           GH_TOKEN: ${{ github.token }}
